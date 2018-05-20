@@ -14,8 +14,9 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AppRoutingModule } from './/app-routing.module';
 import {PromotionService} from "./services/promotion.service";
-
-
+import { LeaderService} from "./services/leader.service";
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,15 +26,21 @@ import {PromotionService} from "./services/promotion.service";
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     MaterialModule,
     FlexLayoutModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule
   ],
-  providers: [DishService, PromotionService],
+  providers: [DishService, PromotionService, LeaderService],
+  entryComponents: [
+    LoginComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
