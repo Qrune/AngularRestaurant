@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Dish } from '../shared/dish';
 import { DISHES } from '../shared/dishes';
 import { Observable } from 'rxjs/Observable';
+import { switchMap } from 'rxjs/operators';
 
 import 'rxjs/add/operator/toPromise';
 import 'rxjs/add/operator/delay';
